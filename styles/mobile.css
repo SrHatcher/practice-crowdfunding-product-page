@@ -144,6 +144,7 @@ header{
     background-color: transparent;
     background-position: center;
     border: none;
+    cursor: pointer;
 }
 .header__button--active{
     height: 6rem;
@@ -163,6 +164,9 @@ main{
     background-color: white;
     border: solid 0.1rem #ededed;
     border-radius: 1rem;
+}
+.main__heading--corrector{
+    z-index: -1;
 }
 .heading__round_logo{
     position: absolute;
@@ -230,6 +234,10 @@ main{
     background-image: url('../images/icon-bookmark.svg');
     background-position: center;
     background-repeat: no-repeat;
+    transition: all ease-in 0.1s;
+}
+.heading__bookmark_button:active{
+    transform: scale(0.90);
 }
 .heading__bookmark_text{
     display: none;
@@ -291,22 +299,81 @@ main{
 }
 .main__about{
     margin-block-start: 3rem;
+    padding: 4rem 2.5rem;
 
     background-color: white;
     border: solid 0.1rem #ededed;
     border-radius: 1rem;
 }
 .about__title{
+    margin-block-end: 2rem;
+
+    font-size: 2.2rem;
+}
+.about__text{
+    margin-block-start: 2rem;
+
+    font-size: 1.4rem;
+
+    color: #929292;
+}
+.about__option_container{
+    margin-block-start: 2.5rem;
+    padding: 2rem;
+
+    border: solid 0.1rem #ededed;
+    border-radius: 1rem;
+}
+.option__header_container{
+    display: flex;
+    flex-direction: column;
+}
+.option__title{
 
 }
-.about__text{}
-.about__option_container{}
-.option__header_container{}
-.option__title{}
-.option__info{}
-.option__text{}
-.option__button_container{}
-.option__amount_container{}
-.option__amount_number{}
-.option__amount_left_text{}
-.option__reward_button{}
+.option__info{
+    font-weight: 500;
+
+    color: var(--moderate-cyan);
+}
+.option__text{
+    font-size: 1.4rem;
+
+    margin-block-start: 3rem;
+
+    color: #929292;
+}
+.option__button_container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    margin-block-start: 3rem;
+}
+.option__amount_container{
+    display: flex;
+    gap: 1rem;
+}
+.option__amount_number{
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+}
+.option__amount_left_text{
+    margin-block-start: 0.4rem;
+
+    font-weight: 500;
+
+    color: #929292;
+}
+.option__reward_button{
+    width: 18rem;
+    height: 5.5rem;
+
+    font-weight: 700;
+
+    color: white;
+    border: none;
+    border-radius: 3rem;
+    background-color: var(--moderate-cyan);
+}
