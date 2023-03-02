@@ -227,9 +227,6 @@ main{
 .heading__back_button:active{
     transform: scale(0.95);
 }
-.heading__bookmark_container{
-
-}
 .heading__bookmark_button{
     width: 5.5rem;
     height: 5.5rem;
@@ -335,9 +332,6 @@ main{
 .option__header_container{
     display: flex;
     flex-direction: column;
-}
-.option__title{
-
 }
 .option__info{
     font-weight: 500;
