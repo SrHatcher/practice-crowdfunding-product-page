@@ -41,6 +41,7 @@ body{
     justify-content: center;
 
     padding-block-start: 24rem;
+    padding-block-end: 10rem;
 
     font-family: var(--font);
     font-size: 1.6rem;
@@ -89,7 +90,7 @@ header{
     background-position: center;
 }
 .header__navbar{
-    position: absolute;
+    position: fixed;
     top: 10rem;
     left: 0;
     right: 0;
@@ -220,6 +221,10 @@ main{
     color: white;
     border: none;
     border-radius: 3rem;
+    transition: all ease-in 0.1s;
+}
+.heading__back_button:active{
+    transform: scale(0.95);
 }
 .heading__bookmark_container{
 
@@ -237,7 +242,7 @@ main{
     transition: all ease-in 0.1s;
 }
 .heading__bookmark_button:active{
-    transform: scale(0.90);
+    transform: scale(0.95);
 }
 .heading__bookmark_text{
     display: none;
@@ -318,11 +323,13 @@ main{
     color: #929292;
 }
 .about__option_container{
+    position: relative;
     margin-block-start: 2.5rem;
     padding: 2rem;
 
     border: solid 0.1rem #ededed;
     border-radius: 1rem;
+    overflow: hidden;
 }
 .option__header_container{
     display: flex;
@@ -376,4 +383,27 @@ main{
     border: none;
     border-radius: 3rem;
     background-color: var(--moderate-cyan);
+    transition: all ease-in 0.1s;
+}
+.option__reward_button:active{
+    transform: scale(0.95);
+}
+
+.option__disabled{
+    display: none;
+}
+
+.option__disabled--active{
+    display: unset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #fdfdfd77;
+}
+
+.option__reward_button--inactive{
+    background-color: var(--dark-gray);
 }
