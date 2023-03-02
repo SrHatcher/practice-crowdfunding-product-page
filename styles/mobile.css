@@ -1,29 +1,304 @@
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/static/Commissioner-Bold.ttf');
+    font-weight: 700;
+}
 
+@font-face{
+    font-family: 'Commissioner';
+    src: url('../fonts/static/Commissioner-Medium.ttf');
+    font-weight: 500;
+}
 
-.header__logo{}
-.header__navbar{}
-.header__list{}
-.header__item{}
-.header__button{}
-.main__heading{}
-.heading__container{}
-.heading__title{}
-.heading__text{}
-.heading__options_container{}
-.heading__back_button{}
-.heading__bookmark_container{}
-.heading__bookmark_button{}
-.heading__bookmark_text{}
-.main__progress{}
-.progress__container{}
-.progress__quantities_container{}
-.quantity__container{}
-.quantity__amount{}
-.quantity__legend{}
-.progress__progress_bar_container{}
-.progress__progress_bar{}
-.main__about{}
-.about__title{}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/static/Commissioner-Regular.ttf');
+    font-weight: 400;
+}
+
+@supports(font-variation-settings: normal){
+    @font-face {
+        font-family: 'Commissioner';
+        src: url('../fonts/Commissioner-VariableFont_wght.ttf');
+        font-weight: 400 700;
+    }
+}
+
+:root{
+    --moderate-cyan: hsl(176, 50%, 47%);
+    --dark-cyan: hsl(176, 72%, 28%);
+    --dark-gray: hsl(0, 0%, 48%);
+
+    --font: 'Commissioner', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+
+    padding-block-start: 24rem;
+
+    font-family: var(--font);
+    font-size: 1.6rem;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.596) 2%, rgba(0,212,255,0) 16%), url('../images/image-hero-mobile.jpg'), #fafafa;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+header{
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 111;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+.header--active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+
+    padding-block-start: 3rem;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.466) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.header__logo{
+    display: block;
+    
+    width: 13rem;
+    height: 6rem;
+
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header__navbar{
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+
+    width: 33rem;
+    height: 21rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: white;
+    border-radius: 1rem;
+}
+.header__navbar--inactive{
+    display: none;
+}
+.header__list{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.header__item{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    padding-inline-start: 4rem;
+
+    list-style: none;
+
+    border-bottom: solid 0.1rem #ececec;
+}
+.header__item:nth-last-child(1){
+    border-bottom: none;
+}
+.header__item a{
+    text-decoration: none;
+    font-weight: 700;
+
+    color: black;
+}
+.header__button{
+    width: 3rem;
+    height: 3rem;
+
+    background-image: url('../images/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+}
+.header__button--active{
+    height: 6rem;
+
+    background-image: url('../images/icon-close-menu.svg') !important;
+
+}
+main{
+    width: 80%;
+    min-width: 33rem;
+}
+.main__heading{
+    position: relative;
+
+    padding: 2.5rem;
+
+    background-color: white;
+    border: solid 0.1rem #ededed;
+    border-radius: 1rem;
+}
+.heading__round_logo{
+    position: absolute;
+    top: -2.5rem;
+    left: calc(50% - 2.5rem);
+
+    width: 5rem;
+    height: 5rem;
+
+    background-image: url('../images/logo-mastercraft.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.heading__container{
+    width: 100%;
+    height: 100%;
+}
+.heading__title{
+    margin-block-start: 2.5rem;
+    
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    text-align: center;
+}
+.heading__text{
+    margin-block-start: 2rem;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+
+    color: #929292;
+}
+.heading__options_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-block-start: 3rem;
+}
+.heading__back_button{
+    width: 100%;
+    max-width: 21.3rem;
+    height: 5.5rem;
+
+    font-weight: 700;
+
+    background-color: var(--moderate-cyan);
+    color: white;
+    border: none;
+    border-radius: 3rem;
+}
+.heading__bookmark_container{
+
+}
+.heading__bookmark_button{
+    width: 5.5rem;
+    height: 5.5rem;
+
+    border-radius: 50%;
+    border: none;
+    background-color: #2f2f2f;
+    background-image: url('../images/icon-bookmark.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.heading__bookmark_text{
+    display: none;
+}
+.main__progress{
+    margin-block-start: 3rem;
+
+    background-color: white;
+    border: solid 0.1rem #ededed;
+    border-radius: 1rem;
+}
+.progress__container{
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+    padding-block-end: 4rem;
+}
+.progress__quantities_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quantity__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 10rem;
+}
+.quantity__container:nth-child(2){
+    width: fit-content;
+
+    border-top: solid 0.1rem #d6d6d6;
+    border-bottom: solid 0.1rem #d6d6d6;
+}
+.quantity__amount{
+    font-size: 3.1rem;
+    font-weight: 700;
+}
+.quantity__legend{
+    color: #929292;
+}
+.progress__progress_bar_container{
+    width: 100%;
+    height: 1.2rem;
+    margin-block-start: 2rem;
+
+    background-color: #f4f4f4;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.progress__progress_bar{
+    width: 80%;
+    height: 100%;
+
+    background-color: var(--moderate-cyan);
+    border-radius: 1rem;
+}
+.main__about{
+    margin-block-start: 3rem;
+
+    background-color: white;
+    border: solid 0.1rem #ededed;
+    border-radius: 1rem;
+}
+.about__title{
+
+}
 .about__text{}
 .about__option_container{}
 .option__header_container{}

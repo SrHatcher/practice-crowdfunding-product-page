@@ -13,29 +13,30 @@
   <title>Frontend Mentor | Crowdfunding product page</title>
 </head>
 <body>
-  <header>
-    <a class="header__logo" href="#" aria-label="company logo">crowndfund</a>
+  <header id="header">
+    <a class="header__logo" href="#" aria-label="company logo"></a>
 
-    <nav class="header__navbar">
+    <nav class="header__navbar header__navbar--inactive">
       <ul class="header__list">
-        <li class="header__item">About</li>
-        <li class="header__item">Discover</li>
-        <li class="header__item">Get Started</li>
+        <li class="header__item"><a href="#">About</a></li>
+        <li class="header__item"><a href="#">Discover</a></li>
+        <li class="header__item"><a href="#">Get Started</a></li>
       </ul>
     </nav>
 
-    <button class="header__button">burger</button>
+    <button class="header__button" ></button>
   </header>
 
   <main>
     <section class="main__heading">
+      <div class="heading__round_logo"></div>
       <div class="heading__container">
         <h1 class="heading__title">Mastercraft Bamboo Monitor Riser</h1>
         <p class="heading__text">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
         <div class="heading__options_container">
           <button class="heading__back_button">Back this project</button>
           <div class="heading__bookmark_container">
-            <button class="heading__bookmark_button">icon</button>
+            <button class="heading__bookmark_button"></button>
             <span class="heading__bookmark_text">Bookmark</span>
           </div>
         </div>
@@ -60,7 +61,7 @@
         </div>
         <div class="progress__progress_bar_container">
           <div class="progress__progress_bar">
-            progress bar
+            
           </div>
         </div>
       </div>
@@ -180,5 +181,7 @@
   <!-- Success modal end -->
   */
   </script>
+
+  <script src="./index.js"></script>
 </body>
 </html>
