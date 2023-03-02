@@ -157,6 +157,8 @@ main{
     max-width: 73rem;
     width: 80%;
     min-width: 33rem;
+
+    display: none;
 }
 .main__heading{
     position: relative;
@@ -402,3 +404,50 @@ main{
 .option__reward_button--inactive{
     background-color: var(--dark-gray);
 }
+
+
+
+/*--------------------modals---------------------------*/
+
+.modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.342);
+}
+
+.modal__pledge_container{
+    min-width: 33rem;
+    width: 80%;
+    max-width: 73rem;
+    padding: 2.5rem;
+
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.pledge__title{
+    font-size: 1.8rem;
+}
+.pledge__text{
+    font-size: 1.4rem;
+}
+.pledge__option_container{}
+.pledge__heading_container{}
+.pledge__radio_title_container{}
+.pledge__radio{}
+.pledge__option_title_container{}
+.pledge__option_text{}
+.pledge__option_separator{}
+.pledge__footer_container{}
+.pledge__footer_legend{}
+.pledge__footer_input_button_container{}
+.pledge__input_container{}
+.pledge__option_button{}
