@@ -61,7 +61,7 @@ header{
     align-items: center;
     justify-content: space-between;
 
-    max-width: 111;
+    max-width: 111rem;
     margin-left: auto;
     margin-right: auto;
     padding: 0 2rem;
@@ -154,6 +154,7 @@ header{
 
 }
 main{
+    max-width: 73rem;
     width: 80%;
     min-width: 33rem;
 }
