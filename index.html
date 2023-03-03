@@ -118,11 +118,13 @@
             <span class="option__amount_number">0</span>
             <span class="option__amount_left_text">left</span>
           </div>
-          <button class="option__reward_button option__reward_button--inactive">Out of Stock</button>
+          <button class="option__reward_button option__reward_button--inactive" disabled >Out of Stock</button>
         </div>
       </div>
     </section>
   </main>
+
+
 
   <div class="modal modal--inactive">
     
@@ -136,7 +138,7 @@
         <div class="pledge__disabled"></div>
         <div class="pledge__heading_container">
           <div class="pledge__radio_title_container">
-            <input type="radio" class="pledge__radio">
+            <input type="radio" class="pledge__radio" id="radio-1">
             <div class="pledge__option_title_container">
               <h3>Pledge with no reward</h3>
             </div>
@@ -162,7 +164,7 @@
         <div class="pledge__disabled"></div>
         <div class="pledge__heading_container">
           <div class="pledge__radio_title_container">
-            <input type="radio" class="pledge__radio">
+            <input type="radio" class="pledge__radio" id="radio-2">
             <div class="pledge__option_title_container">
               <h3>Bamboo Stand</h3>
               <span>Pledge $25 or more</span>
@@ -197,7 +199,7 @@
         <div class="pledge__disabled"></div>
         <div class="pledge__heading_container">
           <div class="pledge__radio_title_container">
-            <input type="radio" class="pledge__radio">
+            <input type="radio" class="pledge__radio" id="radio-3">
             <div class="pledge__option_title_container">
               <h3>Black Edition Stand</h3>
               <span>Pledge $75 or more</span>
@@ -232,7 +234,7 @@
         <div class="pledge__disabled pledge__disabled--active"></div>
         <div class="pledge__heading_container">
           <div class="pledge__radio_title_container">
-            <input type="radio" class="pledge__radio">
+            <input type="radio" class="pledge__radio" id="radio-4" disabled>
             <div class="pledge__option_title_container">
               <h3>Mahogany Special Edition</h3>
               <span>Pledge $75 or more</span>
@@ -264,6 +266,15 @@
       </div>
 
     </div>
+
+
+    <div class="modal__success modal__success--inactive">
+      <div class="success__icon"></div>
+      <span class="success__title">Thanks for your support!</span>
+      <p class="success__text">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed</p>
+      <button class="success__button">Got it!</button>
+    </div>
+
   </div>
   
 
