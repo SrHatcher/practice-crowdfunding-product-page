@@ -6,7 +6,7 @@ const modal = document.querySelector('.modal')
 const modalClose = document.querySelector('.modal__close')
 const backButton = document.querySelector('.heading__back_button')
 
-const totalHeight = document.body.scrollHeight
+let totalHeight = document.body.scrollHeight
 modal.style.height = `${totalHeight}px`
 
 function openModal(){
@@ -27,3 +27,8 @@ function openMenu(){
 backButton.addEventListener('click', openModal)
 menuButton.addEventListener('click', openMenu)
 modalClose.addEventListener('click', closeModal)
+
+window.addEventListener('resize', ()=>{
+    totalHeight=document.body.scrollHeight
+    modal.style.height = `${totalHeight}px`
+})

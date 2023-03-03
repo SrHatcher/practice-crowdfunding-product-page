@@ -137,104 +137,16 @@ body{
 
 /*--------------------modals---------------------------*/
 
-.modal{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
 
-    display: flex;
-    justify-content: center;
-
-    padding-block-start: 15rem;
-    padding-block-end: 10rem;
-    height: fit-content;
-
-    background-color: rgba(0, 0, 0, 0.342);
-}
-.modal--inactive{
-    display: none;
-}
 
 .modal__pledge_container{
-    position: relative;
-
-    min-width: 33rem;
-    width: 80%;
-    max-width: 73rem;
-    height: fit-content;
     padding: 5rem;
-
-    background-color: white;
-    border-radius: 1rem;
-}
-.modal__close{
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    display: block;
-
-    width: 2rem;
-    height: 2rem;
-
-    background-image: url('../images/icon-close-modal.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.pledge__title{
-    font-size: 1.8rem;
-}
-.pledge__text{
-    margin-block-start: 2rem;
-
-    font-size: 1.4rem;
-
-    color: #838383;
-}
-.pledge__option_container{
-    position: relative;
-
-    margin-block-start: 2rem;
-
-    border: solid 0.1rem #dadada;
-    border-radius: 1rem;
-    overflow: hidden;
-}
-.pledge__option_container--active{
-    border: solid 0.2rem var(--moderate-cyan);
-}
-.pledge__heading_container{
-    padding: 2.5rem;
-}
-.pledge__radio_title_container{
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-.pledge__radio{
-    width: 2rem;
-    height: 2rem;
-    padding: 0;
-    margin: 0;
-
-    border: 0;
 }
 .pledge__option_title_container{
     display: flex;
     gap: 2rem;
 
     width: 100%;
-}
-.pledge__option_title_container h3{
-    font-size: 1.4rem;
-}
-.pledge__option_title_container span{
-    font-size: 1.4rem;
-    font-weight: 500;
-
-    color: var(--moderate-cyan);
 }
 .pledge__amount_containaer--desktop{
     display: flex;
@@ -257,91 +169,20 @@ body{
     display: none;
 }
 .pledge__option_text{
-    margin-block-start: 3rem;
     padding-inline-start: 6%;
-
-    font-size: 1.4rem;
-
-    color: #838383;
-}
-.pledge__option_separator{
-    border: solid 0.1rem #eeeeee;
-}
-.pledge__option_separator--inactive{
-    display: none;
 }
 .pledge__footer_container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 2rem;
-
-    padding: 2.5rem;
 }
 .pledge__footer_container--inactive{
     display: none;
 }
-.pledge__footer_legend{
-    text-align: center;
-
-    color: #838383;
-}
 .pledge__footer_input_button_container{
     display: flex;
     justify-content: space-between;
-}
-.pledge__input_container{
-    position: relative;
-
-    width: 10rem;
-    height: 5rem;
-}
-.pledge__input_container span{
-    position: absolute;
-    top: 1.3rem;
-    left: 2.2rem;
-
-    font-weight: 700;
-
-    color: #838383;
-}
-.pledge__input_container input{
-    width: 100%;
-    height: 100%;
-    padding-inline-start: 3.5rem;
-
-    font-weight: 700;
-
-    border-radius: 3rem;
-    border: solid 0.1rem #dbdbdb;
-    outline: none;
-}
-.pledge__option_button{
-    width: 11.5rem;
-    height: 5rem;
-    
-    font-weight: 700;
-
-    background-color: var(--moderate-cyan);
-    border: none;
-    border-radius: 3rem;
-    color: white;
-    transition: all ease-in 0.1s;
-}
-.pledge__option_button:active{
-    transform: scale(0.95);
-}
-
-.pledge__disabled{
-    display: none;
-}
-
-.pledge__disabled--active{
-    display: unset;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background-color: #fdfdfd77;
+    gap: 1.5rem;
 }
