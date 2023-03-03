@@ -221,7 +221,12 @@ body{
 
     border: 0;
 }
-.pledge__option_title_container{}
+.pledge__option_title_container{
+    display: flex;
+    gap: 2rem;
+
+    width: 100%;
+}
 .pledge__option_title_container h3{
     font-size: 1.4rem;
 }
@@ -231,8 +236,29 @@ body{
 
     color: var(--moderate-cyan);
 }
+.pledge__amount_containaer--desktop{
+    display: flex;
+
+    margin-block-start: unset;
+}
+.pledge__amount_containaer--desktop span:nth-child(1){
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.pledge__amount_containaer--desktop span:nth-child(2){
+    margin-inline-start: 0.5rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    color: #838383;
+}
+.pledge__amount_containaer--mobile{
+    display: none;
+}
 .pledge__option_text{
     margin-block-start: 3rem;
+    padding-inline-start: 6%;
 
     font-size: 1.4rem;
 

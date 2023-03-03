@@ -508,6 +508,26 @@ main{
 
     color: #838383;
 }
+.pledge__amount_containaer--desktop{
+    display: none;
+}
+.pledge__amount_containaer--mobile{
+    display: flex;
+
+    margin-block-start: 2rem;
+}
+.pledge__amount_containaer--mobile span:nth-child(1){
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.pledge__amount_containaer--mobile span:nth-child(2){
+    margin-inline-start: 0.5rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    color: #838383;
+}
 .pledge__option_separator{
     border: solid 0.1rem #eeeeee;
 }
