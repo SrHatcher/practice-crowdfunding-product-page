@@ -238,9 +238,14 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     transition: all ease-in 0.1s;
+    cursor: pointer;
 }
 .heading__bookmark_button:active{
     transform: scale(0.95);
+}
+.heading__bookmark_button--active{
+    background-color: #157a74 !important;
+    background-image: url('../images/icon-bookmark-white.svg');
 }
 .heading__bookmark_text{
     display: none;
@@ -670,4 +675,23 @@ main{
 
 .success__button:active{
     transform: scale(0.95);
+}
+
+@media (hover:hover){
+    .heading__back_button:hover{
+        background-color: #157a74;
+        cursor: pointer;
+    }
+    .option__reward_button:hover{
+        background-color: #157a74;
+        cursor: pointer;
+    }
+    .pledge__option_button:hover{
+        background-color: #157a74;
+        cursor: pointer;
+    }
+    .success__button:hover{
+        background-color: #157a74;
+        cursor: pointer;
+    }
 }

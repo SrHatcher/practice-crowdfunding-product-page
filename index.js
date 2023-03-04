@@ -13,6 +13,9 @@ const successButton = document.querySelector('.success__button')
 const pledgeContinueButton = document.querySelectorAll('.pledge__option_button')
 const pledgeModal = document.querySelector('.modal__pledge_container')
 const modalSuccess = document.querySelector('.modal__success')
+const bookmarkButton = document.querySelector('.heading__bookmark_button')
+const bookmarkText = document.querySelector('.heading__bookmark_text')
+const pledgeInputs = document.querySelectorAll('.pledge__input')
 
 optionRewardButton.forEach((element, index)=>{
     element.addEventListener('click', ()=>{
@@ -27,8 +30,34 @@ radioButtons.forEach((element, index)=>{
     })
 })
 
-pledgeContinueButton.forEach((element)=>{
+pledgeContinueButton.forEach((element, index)=>{
     element.addEventListener('click',()=>{
+        let pledge
+        switch (index) {
+            case 0:
+                pledge = 0
+                break;
+            case 1:
+                pledge = 25
+                break;
+            case 2:
+                pledge = 75
+                break;
+            case 4:
+                pledge = 200
+                break;
+            default:
+                break;
+        }
+        
+        const inputValue = pledgeInputs[index].value;
+        const value = Number(inputValue)
+
+        if(!Number(inputValue) || value<=pledge){
+            pledgeInputs[index].value = ''
+            return
+        }
+
         pledgeModal.classList.toggle('modal__pledge_container--inactive')
         modalSuccess.classList.toggle('modal__success--inactive')
     })
@@ -63,10 +92,27 @@ function activatePledgeInputs(index){
     pledgeFooter[index].classList.toggle('pledge__footer_container--inactive', false)
 }
 
+function bookProject(){
+    bookmarkButton.classList.toggle('heading__bookmark_button--active')
+
+    if(bookmarkText.innerText === 'Bookmark'){
+        bookmarkText.style.paddingInlineStart = '6rem'
+        bookmarkText.style.fontWeight = '700'
+        bookmarkText.style.color = '#157a74'
+        bookmarkText.innerText = 'Bookmarked'
+    }else{
+        bookmarkText.style.paddingInlineStart = '7rem'
+        bookmarkText.style.fontWeight = '400'
+        bookmarkText.style.color = 'black'
+        bookmarkText.innerText = 'Bookmark'
+    }
+}
+
 backButton.addEventListener('click', openModal)
 menuButton.addEventListener('click', openMenu)
 modalClose.addEventListener('click', closeModal)
 successButton.addEventListener('click', closeModal)
+bookmarkButton.addEventListener('click', bookProject)
 
 window.addEventListener('resize', ()=>{
     totalHeight=document.body.scrollHeight
