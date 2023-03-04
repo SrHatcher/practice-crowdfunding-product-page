@@ -77,9 +77,14 @@ pledgeContinueButton.forEach((element, index)=>{
         const inputValue = pledgeInputs[index].value;
         const value = Number(inputValue)
 
-        if(!Number(inputValue) || value<=pledge){
+        if(!Number(inputValue) || value<pledge){
             pledgeInputs[index].value = ''
             return
+        }
+
+        if(value <= 0){
+            pledgeInputs[index].value = ''
+            return;
         }
 
         const newBacked = initialData.backed + value
