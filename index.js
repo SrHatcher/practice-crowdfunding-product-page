@@ -16,9 +16,32 @@ const modalSuccess = document.querySelector('.modal__success')
 const bookmarkButton = document.querySelector('.heading__bookmark_button')
 const bookmarkText = document.querySelector('.heading__bookmark_text')
 const pledgeInputs = document.querySelectorAll('.pledge__input')
+const backedSpan = document.getElementById('backed-amount')
+const backersSpan = document.getElementById('backers')
+const daysSpan = document.getElementById('daysLeft')
+const progressBar = document.querySelector('.progress__progress_bar')
+const optionContainers = document.querySelectorAll('.pledge__option_container')
+const pledgeTitles = document.querySelectorAll('.pledge__option_title')
+
+const initialData = {
+    backed: 89914,
+    totalBacked: 100000,
+    totalbackers: 5007,
+    daysLeft: 56,
+    bambooStand: 101,
+    blackEdition: 64,
+    mahoganySpecial: 0
+}
+
+pledgeTitles.forEach((element, index)=>{
+    element.addEventListener('click', ()=>{
+        activatePledgeInputs(index)
+    })
+})
 
 optionRewardButton.forEach((element, index)=>{
     element.addEventListener('click', ()=>{
+        window.scrollTo(0, 0)
         openModal()
         activatePledgeInputs(index+1)
     })
@@ -58,6 +81,16 @@ pledgeContinueButton.forEach((element, index)=>{
             return
         }
 
+        const newBacked = initialData.backed + value
+        const newBackers = initialData.totalbackers + 1
+
+        backedSpan.innerText = `$${newBacked.toLocaleString()}`
+        backersSpan.innerText = `${newBackers.toLocaleString()}`
+
+        const newWidth = (newBacked / initialData.totalBacked) * 100
+
+        progressBar.style.width = `${newWidth}%`
+
         pledgeModal.classList.toggle('modal__pledge_container--inactive')
         modalSuccess.classList.toggle('modal__success--inactive')
     })
@@ -86,6 +119,9 @@ function activatePledgeInputs(index){
     radioButtons.forEach(element2=>element2.checked = false)
     pledgeSeparators.forEach(element2=>element2.classList.toggle('pledge__option_separator--inactive', true))
     pledgeFooter.forEach(element2=>element2.classList.toggle('pledge__footer_container--inactive', true))
+    optionContainers.forEach(element2 => element2.classList.toggle('pledge__option_container--active', false))
+
+    optionContainers[index].classList.toggle('pledge__option_container--active')
 
     radioButtons[index].checked = true
     pledgeSeparators[index].classList.toggle('pledge__option_separator--inactive', false)

@@ -501,6 +501,8 @@ main{
 }
 .pledge__option_title_container h3{
     font-size: 1.4rem;
+
+    cursor: pointer;
 }
 .pledge__option_title_container span{
     font-size: 1.4rem;
@@ -693,5 +695,8 @@ main{
     .success__button:hover{
         background-color: #157a74;
         cursor: pointer;
+    }
+    .pledge__option_title_container h3:hover{
+        color: var(--moderate-cyan);
     }
 }
