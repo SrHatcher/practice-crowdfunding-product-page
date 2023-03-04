@@ -22,6 +22,7 @@ const daysSpan = document.getElementById('daysLeft')
 const progressBar = document.querySelector('.progress__progress_bar')
 const optionContainers = document.querySelectorAll('.pledge__option_container')
 const pledgeTitles = document.querySelectorAll('.pledge__option_title')
+const optionAmount = document.querySelectorAll('.option__amount_number')
 
 const initialData = {
     backed: 89914,
@@ -90,6 +91,28 @@ pledgeContinueButton.forEach((element, index)=>{
         const newWidth = (newBacked / initialData.totalBacked) * 100
 
         progressBar.style.width = `${newWidth}%`
+
+        if(pledge >= 25){
+            let amount = optionAmount[index -1 ].outerText
+            console.log(amount)
+            let newAmount
+            switch(pledge){
+                case 25:
+                    newAmount = amount - 1
+                    optionAmount[index - 1].innerText = newAmount
+                    break;
+                case 75:
+                    newAmount = amount - 1
+                    optionAmount[index - 1].innerText = newAmount
+                    break;
+                case 200:
+                    newAmount = amount - 1
+                    optionAmount[index  - 1].innerText = newAmount
+                    break;
+            }
+        }
+
+        
 
         pledgeModal.classList.toggle('modal__pledge_container--inactive')
         modalSuccess.classList.toggle('modal__success--inactive')
